@@ -3,7 +3,7 @@ import { getJob } from "@/app/lib/redis"
 const STALE_PROCESSING_MS = 90000
 const STALE_QUEUED_MS = 120000
 
-export async function GET(req: Request) {
+export async function POST(req: Request) {
   try {
     const { searchParams } = new URL(req.url)
     const jobId = searchParams.get("jobId")
